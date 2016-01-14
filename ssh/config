@@ -1,0 +1,156 @@
+Host *
+  ServerAliveInterval 60
+
+# CMSSW CVS repository
+# Configure this to use kerberos authentication
+Host cmssw.cvs.cern.ch
+  GSSAPITrustDns yes
+  GSSAPIAuthentication yes
+  GSSAPIDelegateCredentials yes
+
+# CMS SVN repository
+# Configure this to use kerberos authentication
+Host *svn.cern.ch
+User agilbert
+  GSSAPITrustDns yes
+  GSSAPIAuthentication yes
+  GSSAPIDelegateCredentials yes
+
+
+# CERN lxplus6
+Host lxplus.cern.ch lxp
+User agilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+GSSAPITrustDns yes
+GSSAPIAuthentication yes
+GSSAPIDelegateCredentials yes
+Host lxp
+HostName lxplus.cern.ch
+
+# CERN pcagilbert
+Host pcagilbert.cern.ch pca
+User agilbert
+ForwardX11 yes
+ForwardX11Timeout 8h
+ProxyCommand ssh lxplus.cern.ch /usr/bin/nc %h %p 2> /dev/null
+GSSAPITrustDNS no
+GSSAPIAuthentication yes
+GSSAPIDelegateCredentials yes
+Host pca
+HostName pcagilbert.cern.ch
+
+
+# CERN vm-slc5
+Host agilbert-vm-slc5.cern.ch avm
+User agilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+ProxyCommand ssh lxplus.cern.ch /usr/bin/nc %h %p 2> /dev/null
+GSSAPITrustDNS no
+GSSAPIAuthentication yes
+GSSAPIDelegateCredentials yes
+Host avm
+HostName agilbert-vm-slc5.cern.ch
+
+# CERN vm-slc6
+Host agilbert-vm-slc6.cern.ch avm6
+User agilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+ProxyCommand ssh lxplus.cern.ch /usr/bin/nc %h %p 2> /dev/null
+GSSAPITrustDNS no
+GSSAPIAuthentication yes
+GSSAPIDelegateCredentials yes
+Host avm6
+HostName agilbert-vm-slc6.cern.ch
+
+# Imperial lx06
+Host lx*.hep.ph.ic.ac.uk lxi
+User ajg06
+ForwardX11 yes
+ForwardX11Timeout 8h
+AddressFamily inet
+GSSAPITrustDNS no
+GSSAPIAuthentication no
+Host lxi
+HostName lx06.hep.ph.ic.ac.uk
+
+# Imperial desktop pc
+Host heppc80.hep.ph.ic.ac.uk hep
+User ajg06
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+ProxyCommand ssh -4 lx06.hep.ph.ic.ac.uk /usr/bin/nc %h %p 2> /dev/null
+Host hep
+HostName heppc80.hep.ph.ic.ac.uk
+
+# KIT desktop
+Host ekplx29.physik.uni-karlsruhe.de ekplx
+User agilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+Host ekplx
+HostName ekplx29.physik.uni-karlsruhe.de
+
+# KIT ekpcms5
+Host ekpcms5.physik.uni-karlsruhe.de ekp5
+User agilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+Host ekp5
+HostName ekpcms5.physik.uni-karlsruhe.de
+
+# KIT ekpcms6
+Host ekpcms6.physik.uni-karlsruhe.de ekp6
+User agilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+Host ekp6
+HostName ekpcms6.physik.uni-karlsruhe.de
+
+# NAF SLC5 machine
+Host nafhh-cms01.desy.de naf1
+User agilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+Host naf1
+HostName nafhh-cms01.desy.de
+
+# NAF SLC6 machine
+Host nafhh-cms03.desy.de naf3
+User agilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+Host naf3
+HostName nafhh-cms03.desy.de
+
+Host nafhh-cms04.desy.de naf4
+User agilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+Host naf4
+HostName nafhh-cms04.desy.de
+
+Host github.com
+IdentityFile ~/.ssh/id_rsa_github
+
+Host 192.168.56.2 vm
+User agilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+IdentityFile ~/.ssh/vm_id_rsa
+Host vm
+HostName 192.168.56.2
+
