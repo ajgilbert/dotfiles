@@ -45,9 +45,9 @@ set mouse=a
 "vnoremap p "_dp
 
 syntax enable
-let g:solarized_termtrans = 1
+"let g:solarized_termtrans = 1
 set background=dark
-colorscheme base16-ocean
+"colorscheme base16-ocean
 set hlsearch
 
 " Only do this part when compiled with support for autocommands.
