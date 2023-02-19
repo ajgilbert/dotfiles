@@ -30,4 +30,6 @@ function restore () {
 
 export PS1="[\u@\h \[$(tput sgr0)\]\[\033[38;5;4m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]]\\$ \[$(tput sgr0)\]"
 
+alias ki='kinit -l 48h agilbert@CERN.CH'
+
 source /opt/homebrew/etc/bash_completion.d/git-completion.bash
