@@ -1,0 +1,24 @@
+[user]
+	name = Andrew Gilbert
+	email = andrew.gilbert@cern.ch
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/Andrew/.gitignore_global
+  pager = delta --max-line-length 0
+[http]
+  emptyAuth = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+  unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+[interactive]
+  diffFilter = delta --color-only --max-line-length 0
+
+[delta]
+  syntax-theme = Nord
+  features = line-numbers decorations
+  whitespace-error-style = 22 reverse
+  file-decoration-style = ul
