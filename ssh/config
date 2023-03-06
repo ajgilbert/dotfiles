@@ -57,6 +57,18 @@ HostName 192.168.56.2
 Host llrgate01.in2p3.fr llrgate
 User gilbert
 ForwardAgent yes
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
 IdentityFile ~/.ssh/id_rsa_llr
 Host llrgate
 HostName llrgate01.in2p3.fr
+
+Host llruicms01.in2p3.fr llrcms
+User gilbert
+ForwardX11 yes
+ForwardX11Trusted yes
+ForwardX11Timeout 8h
+ProxyJump llrgate01.in2p3.fr
+Host llrcms
+HostName llruicms01.in2p3.fr
