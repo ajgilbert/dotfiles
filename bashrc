@@ -33,3 +33,5 @@ export PS1="[\u@\h \[$(tput sgr0)\]\[\033[38;5;4m\]\W\[$(tput sgr0)\]\[\033[38;5
 alias ki='kinit -l 48h agilbert@CERN.CH'
 
 source /opt/homebrew/etc/bash_completion.d/git-completion.bash
+
+source /Users/Andrew/.docker/init-bash.sh || true # Added by Docker Desktop

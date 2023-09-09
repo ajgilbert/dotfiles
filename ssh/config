@@ -44,7 +44,7 @@ Host github.com
 IdentityFile ~/.ssh/id_rsa_github
 
 Host 192.168.56.2 vm
-UseKeychain yes
+#UseKeychain yes
 User agilbert
 ForwardAgent yes
 ForwardX11 yes
@@ -69,6 +69,8 @@ User gilbert
 ForwardX11 yes
 ForwardX11Trusted yes
 ForwardX11Timeout 8h
+ForwardAgent yes
+IdentityFile ~/.ssh/id_rsa_llr
 ProxyJump llrgate01.in2p3.fr
 Host llrcms
 HostName llruicms01.in2p3.fr
