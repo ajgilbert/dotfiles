@@ -4,7 +4,6 @@ HISTSIZE=100000
 HISTCONTROL=ignoreboth
 PROMPT_COMMAND='history -a'
 
-#export EDITOR="/usr/local/bin/subl -w -n"
 
 export CLICOLOR=1
 export PWG=~/Workspace/projects/wgamma/CMSSW_10_2_21/src/Acorn/Analysis
@@ -32,6 +31,14 @@ export PS1="[\u@\h \[$(tput sgr0)\]\[\033[38;5;4m\]\W\[$(tput sgr0)\]\[\033[38;5
 
 alias ki='kinit -l 48h agilbert@CERN.CH'
 
-source /opt/homebrew/etc/bash_completion.d/git-completion.bash
+if [ -f "/opt/homebrew/etc/bash_completion.d/git-completion.bash" ]; then
+  source /opt/homebrew/etc/bash_completion.d/git-completion.bash
+fi
 
-source /Users/Andrew/.docker/init-bash.sh || true # Added by Docker Desktop
+if [ -f "/Users/Andrew/.docker/init-bash.sh" ]; then
+  source /Users/Andrew/.docker/init-bash.sh || true # Added by Docker Desktop
+fi
+
+if [ -f "$HOME/.local.bashrc" ]; then
+  source $HOME/.local.bashrc
+fi
