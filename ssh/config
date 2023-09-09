@@ -4,7 +4,7 @@ Host *
   ServerAliveInterval 60
   XAuthLocation /opt/X11/bin/xauth
 
-Host lxplus.cern.ch lxtunnel.cern.ch lxp7 lxp8 lxplus8.cern.ch
+Host lxplus.cern.ch lxtunnel.cern.ch lxp7 lxp9 lxplus9.cern.ch
 User agilbert
 ForwardX11 yes
 ForwardX11Trusted yes
@@ -14,8 +14,8 @@ GSSAPIDelegateCredentials yes
 AddressFamily inet
 Host lxp7
 HostName lxplus.cern.ch
-Host lxp8
-HostName lxplus8.cern.ch
+Host lxp9
+HostName lxplus9.cern.ch
 
 # CERN vm-cc7
 Host agilbert-vm-cc7.cern.ch avm7
