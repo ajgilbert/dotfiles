@@ -11,7 +11,7 @@ ForwardX11Trusted yes
 ForwardX11Timeout 8h
 GSSAPIAuthentication yes
 GSSAPIDelegateCredentials yes
-AddressFamily inet
+#AddressFamily inet
 Host lxp7
 HostName lxplus.cern.ch
 Host lxp9
@@ -30,7 +30,13 @@ GSSAPIDelegateCredentials yes
 Host avm7
 HostName agilbert-vm-cc7.cern.ch
 
-Host agilbert-vm-c8.cern.ch avm8
+
+Host vm-cc7
+RemoteCommand /afs/cern.ch/user/a/agilbert/launch-cmssw-el7 
+HostName agilbert-test.cern.ch
+RequestTTY yes
+
+Host agilbert-test.cern.ch vm vm-cc7
 User agilbert
 ForwardX11 yes
 ForwardX11Trusted yes
@@ -38,23 +44,11 @@ ForwardX11Timeout 8h
 ProxyJump lxtunnel.cern.ch
 GSSAPIAuthentication yes
 GSSAPIDelegateCredentials yes
-#AddressFamily inet
-Host avm8
-HostName agilbert-vm-c8.cern.ch
+Host vm
+HostName agilbert-test.cern.ch
 
 Host github.com
 IdentityFile ~/.ssh/id_rsa_github
-
-Host 192.168.56.2 vm
-#UseKeychain yes
-User agilbert
-ForwardAgent yes
-ForwardX11 yes
-ForwardX11Trusted yes
-ForwardX11Timeout 8h
-IdentityFile ~/.ssh/vm_id_rsa
-Host vm
-HostName 192.168.56.2
 
 Host llrgate01.in2p3.fr llrgate
 User gilbert
