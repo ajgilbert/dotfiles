@@ -31,10 +31,10 @@ Host avm7
 HostName agilbert-vm-cc7.cern.ch
 
 
-Host vm-cc7
-RemoteCommand /afs/cern.ch/user/a/agilbert/launch-cmssw-el7 
-HostName agilbert-test.cern.ch
-RequestTTY yes
+#Host vm-cc7
+#RemoteCommand /afs/cern.ch/user/a/agilbert/launch-cmssw-el7 
+#HostName agilbert-test.cern.ch
+#RequestTTY yes
 
 Host agilbert-test.cern.ch vm vm-cc7
 User agilbert
