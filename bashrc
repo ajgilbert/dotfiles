@@ -1,7 +1,9 @@
 shopt -s histappend
+shopt -s checkwinsize
 HISTFILESIZE=100000
 HISTSIZE=100000
 HISTCONTROL=ignoreboth
+HISTTIMEFORMAT="%F %T: "
 PROMPT_COMMAND='history -a'
 
 export CLICOLOR=1
