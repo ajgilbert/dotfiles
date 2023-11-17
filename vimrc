@@ -47,7 +47,7 @@ set mouse=a
 syntax enable
 "let g:solarized_termtrans = 1
 set background=dark
-"colorscheme base16-ocean
+colorscheme nord
 set hlsearch
 
 " Only do this part when compiled with support for autocommands.
@@ -84,8 +84,10 @@ endif " has("autocmd")
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
+if !exists(":DiffOrig")
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
+endif
 
 :set tags=./tags,./../tags,./*/tags
 
