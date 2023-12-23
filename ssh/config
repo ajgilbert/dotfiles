@@ -4,7 +4,7 @@ Host *
   ServerAliveInterval 60
   XAuthLocation /opt/X11/bin/xauth
 
-Host lxplus.cern.ch lxtunnel.cern.ch lxp7 lxp9 lxplus9.cern.ch
+Host lxplus7.cern.ch lxtunnel.cern.ch lxp7 lxp9 lxplus9.cern.ch
 User agilbert
 ForwardX11 yes
 ForwardX11Trusted yes
@@ -13,7 +13,7 @@ GSSAPIAuthentication yes
 GSSAPIDelegateCredentials yes
 #AddressFamily inet
 Host lxp7
-HostName lxplus.cern.ch
+HostName lxplus7.cern.ch
 Host lxp9
 HostName lxplus9.cern.ch
 
@@ -31,12 +31,12 @@ Host avm7
 HostName agilbert-vm-cc7.cern.ch
 
 
-#Host vm-cc7
-#RemoteCommand /afs/cern.ch/user/a/agilbert/launch-cmssw-el7 
-#HostName agilbert-test.cern.ch
-#RequestTTY yes
+Host vm-cc7
+RemoteCommand /afs/cern.ch/user/a/agilbert/launch-cmssw-el7 
+HostName agilbert-vm-el9.cern.ch
+RequestTTY yes
 
-Host agilbert-test.cern.ch vm vm-cc7
+Host agilbert-vm-el9.cern.ch avm9
 User agilbert
 ForwardX11 yes
 ForwardX11Trusted yes
@@ -44,8 +44,8 @@ ForwardX11Timeout 8h
 ProxyJump lxtunnel.cern.ch
 GSSAPIAuthentication yes
 GSSAPIDelegateCredentials yes
-Host vm
-HostName agilbert-test.cern.ch
+Host avm9
+HostName agilbert-vm-el9.cern.ch
 
 Host github.com
 IdentityFile ~/.ssh/id_rsa_github
