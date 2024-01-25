@@ -1,3 +1,4 @@
+IgnoreUnknown RemoteCommand
 Include ~/.ssh/local.config
 
 Host *
