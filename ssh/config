@@ -19,6 +19,8 @@ Host lxp8
 HostName lxplus8.cern.ch
 Host lxp9
 HostName lxplus9.cern.ch
+Host lxp8
+HostName lxplus8.cern.ch
 
 # CERN vm-cc7
 Host agilbert-vm-cc7.cern.ch avm7
