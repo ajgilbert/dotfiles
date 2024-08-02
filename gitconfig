@@ -1,6 +1,7 @@
 [user]
 	name = Andrew Gilbert
 	email = andrew.gilbert@cern.ch
+	github = ajgilbert
 [push]
 	default = simple
 [core]
@@ -23,3 +24,6 @@
   features = line-numbers decorations
   whitespace-error-style = 22 reverse
   file-decoration-style = ul
+
+[include]
+    path = .local.gitconfig

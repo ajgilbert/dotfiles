@@ -10,7 +10,7 @@ export CLICOLOR=1
 
 export X509_USER_PROXY=~/.globus/user_proxy.pem
 
-export SHORT_HOSTNAME=$(echo $(hostname -s) | sed "s|agilbert-vm-cc7|avm7|g" | sed "s|agilbert-vm-el9|avm9|g" | sed "s|lxplus9.*|lxp9|g" | sed "s|lxplus7.*|lxp7|g")
+export SHORT_HOSTNAME=$(echo $(hostname -s) | sed "s|agilbert-vm-cc7|avm7|g" | sed "s|agilbert-vm-el9|avm9|g" | sed "s|lxplus9.*|lxp9|g" | sed "s|lxplus7.*|lxp7|g" | sed "s|llruicms01.*|llrcms|g")
 PROMPT_DIRTRIM=3
 export PS1="[${SHORT_HOSTNAME} \[$(tput sgr0)\]\[\033[38;5;4m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]]\\$ \[$(tput sgr0)\]"
 #export PS1="[\u@\h \[$(tput sgr0)\]\[\033[38;5;4m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]]\\$ \[$(tput sgr0)\]"
@@ -44,3 +44,7 @@ fi
 if [ -f "$HOME/.local.bashrc" ]; then
   source $HOME/.local.bashrc
 fi
+
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
