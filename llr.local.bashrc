@@ -1,5 +1,6 @@
 export CRYPTOGRAPHY_ALLOW_OPENSSL_102
 export PATH=${HOME}/sw/bin:${HOME}/sw/php-plots/bin:${PATH}
+export KRB5_CONFIG=/home/llr/cms/gilbert/krb5.conf
 
 # So we can use EOS commands
 export EOS_MGM_URL=root://eos.grif.fr
