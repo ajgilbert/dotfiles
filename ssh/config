@@ -33,8 +33,6 @@ GSSAPIAuthentication yes
 GSSAPIDelegateCredentials yes
 #IdentityFile ~/.ssh/id_rsa_cern
 
-
-
 Host agilbert-vm-el9.cern.ch avm9 vm-cc7
 User agilbert
 ForwardX11 yes
@@ -74,16 +72,6 @@ ProxyJump llrgate01.in2p3.fr
 Host llrcms
 HostName llruicms01.in2p3.fr
 
-Host llrui01.in2p3.fr llr9
-User gilbert
-ForwardX11 yes
-ForwardX11Trusted yes
-ForwardX11Timeout 8h
-ForwardAgent yes
-IdentityFile ~/.ssh/id_rsa_llr
-ProxyJump llrgate01.in2p3.fr
-Host llr9
-HostName llrui01.in2p3.fr
 
 Host polui04.in2p3.fr llrpol4
 User gilbert
