@@ -13,3 +13,5 @@ then
 fi 
 
   source /Users/Andrew/.docker/init-bash.sh || true # Added by Docker Desktop
+  export PATH="/opt/homebrew/opt/node@22/bin:$HOME/.npm-packages/bin:$PATH"
+  export NPM_CONFIG_PREFIX=$HOME/.npm-packages
