@@ -8,7 +8,8 @@ export EOS_HOME=/eos/grif/cms/llr/store/user/agilbert
 
 # Use modules to pick up a newer bash version
 source /etc/profile.d/modules.sh
-module use /opt/exp_soft/vo.llr.in2p3.fr/modulefiles_el7 && module load git/2.19.1
+#module use /opt/exp_soft/vo.llr.in2p3.fr/modulefiles_el7 && module load git/2.19.1
+
 # Enable bash completions for git
 
 export WORK="/grid_mnt/data__data.polcms/cms/gilbert/"
@@ -36,3 +37,12 @@ alias ana-diphoton='cd /grid_mnt/data__data.polcms/cms/gilbert/diboson/CMSSW_14_
 alias ana-diphoton-triggers='cd /grid_mnt/data__data.polcms/cms/gilbert/diboson/CMSSW_14_1_0_pre4/src/Acorn/Analysis; cmsenv; export LC_ALL=en_US.UTF-8; export TMPDIR="/tmp/$(whoami)"; ACORN_OUTPUT_EOS="/eos/grif/cms/llr/store/user/agilbert/store_diphoton_triggers"; export ACORN_OUTPUT_PREFIX="root://eos.grif.fr/"; ACORN_OUTPUT_SAMPLES="${ACORN_OUTPUT_PREFIX}${ACORN_OUTPUT_EOS}"; export ACORN_MANIFEST=root://eos.grif.fr//eos/grif/cms/llr/store/user/agilbert; export ACORN_JOBS="LLR-SHORT"; export ACORN_PREFER_SITES="T2_FR_GRIF,T2_CH_CERN,T2_DE_DESY,T2_FR_IPHC,T2_BE_IIHE,T2_UK_London_IC"'
 
 alias ana-zll='cd /grid_mnt/data__data.polcms/cms/gilbert/diboson/CMSSW_14_1_0_pre4/src/Acorn/Analysis; cmsenv; export LC_ALL=en_US.UTF-8; export TMPDIR="/tmp/$(whoami)"; ACORN_OUTPUT_EOS="/eos/grif/cms/llr/store/user/agilbert/store_zll"; export ACORN_OUTPUT_PREFIX="root://eos.grif.fr/"; ACORN_OUTPUT_SAMPLES="${ACORN_OUTPUT_PREFIX}${ACORN_OUTPUT_EOS}"; export ACORN_MANIFEST=root://eos.grif.fr//eos/grif/cms/llr/store/user/agilbert; export ACORN_JOBS="LLR-SHORT"; export ACORN_PREFER_SITES="T2_FR_GRIF,T2_CH_CERN,T2_DE_DESY,T2_FR_IPHC,T2_BE_IIHE,T2_UK_London_IC"'
+
+alias ana-lepfakes='cd /grid_mnt/data__data.polcms/cms/gilbert/diboson/CMSSW_14_1_0_pre4/src/Acorn/Analysis; cmsenv; export LC_ALL=en_US.UTF-8; export TMPDIR="/tmp/$(whoami)"; ACORN_OUTPUT_EOS="/eos/grif/cms/llr/store/user/agilbert/store_lepfakes"; export ACORN_OUTPUT_PREFIX="root://eos.grif.fr/"; ACORN_OUTPUT_SAMPLES="${ACORN_OUTPUT_PREFIX}${ACORN_OUTPUT_EOS}"; export ACORN_MANIFEST=root://eos.grif.fr//eos/grif/cms/llr/store/user/agilbert; export ACORN_JOBS="LLR-SHORT"; export ACORN_PREFER_SITES="T2_FR_GRIF,T2_CH_CERN,T2_DE_DESY,T2_FR_IPHC,T2_BE_IIHE,T2_UK_London_IC"'
+alias ana-lepfakes-16='cd /grid_mnt/data__data.polcms/cms/gilbert/diboson/CMSSW_16_1_0_pre3/src/Acorn/Analysis; cmsenv; export LC_ALL=en_US.UTF-8; export TMPDIR="/tmp/$(whoami)"; ACORN_OUTPUT_EOS="/eos/grif/cms/llr/store/user/agilbert/store_lepfakes"; export ACORN_OUTPUT_PREFIX="root://eos.grif.fr/"; ACORN_OUTPUT_SAMPLES="${ACORN_OUTPUT_PREFIX}${ACORN_OUTPUT_EOS}"; export ACORN_MANIFEST=root://eos.grif.fr//eos/grif/cms/llr/store/user/agilbert; export ACORN_JOBS="LLR-SHORT"; export ACORN_PREFER_SITES="T2_FR_GRIF,T2_CH_CERN,T2_DE_DESY,T2_FR_IPHC,T2_BE_IIHE,T2_UK_London_IC"'
+alias ana-stitching='cd /grid_mnt/data__data.polcms/cms/gilbert/diboson/CMSSW_14_1_0_pre4/src/Acorn/Analysis; cmsenv; export LC_ALL=en_US.UTF-8; export TMPDIR="/tmp/$(whoami)"; ACORN_OUTPUT_EOS="/eos/grif/cms/llr/store/user/agilbert/store_stitching"; export ACORN_OUTPUT_PREFIX="root://eos.grif.fr/"; ACORN_OUTPUT_SAMPLES="${ACORN_OUTPUT_PREFIX}${ACORN_OUTPUT_EOS}"; export ACORN_MANIFEST=root://eos.grif.fr//eos/grif/cms/llr/store/user/agilbert; export ACORN_JOBS="LLR-SHORT"; export ACORN_PREFER_SITES="T2_FR_GRIF,T2_CH_CERN,T2_DE_DESY,T2_FR_IPHC,T2_BE_IIHE,T2_UK_London_IC"'
+
+alias lxp9-cm='ssh -fNM lxp9'
+alias lxp9-cm-check='ssh -O check lxplus.cern.ch'
+alias lxp9-cm-exit='ssh -O exit lxplus.cern.ch'
+
