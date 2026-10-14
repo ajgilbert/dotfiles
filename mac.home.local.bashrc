@@ -28,3 +28,7 @@ export NPM_CONFIG_PREFIX=$HOME/.npm-packages
 alias lxp9-cm='ssh -fNM lxp9'
 alias lxp9-cm-check='ssh -O check lxplus.cern.ch'
 alias lxp9-cm-exit='ssh -O exit lxplus.cern.ch'
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/Andrew/.lmstudio/bin"
+# End of LM Studio CLI section
