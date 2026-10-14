@@ -28,7 +28,7 @@ ForwardX11Trusted yes
 ForwardX11Timeout 8h
 #GSSAPIAuthentication yes
 GSSAPIDelegateCredentials yes
-IdentityFile ~/.ssh/id_rsa_cern
+# IdentityFile ~/.ssh/id_rsa_cern
 
 Host agilbert-vm-el9.cern.ch avm9 vm-cc7
 User agilbert
@@ -48,15 +48,17 @@ Host vm-cc7
 Host github.com
 IdentityFile ~/.ssh/id_rsa_github
 
-Host llrgate01.in2p3.fr llrgate
+Host llrgate0*.in2p3.fr llrgate01 llrgate02
 User gilbert
 ForwardAgent yes
 ForwardX11 yes
 ForwardX11Trusted yes
 ForwardX11Timeout 8h
 IdentityFile ~/.ssh/id_rsa_llr
-Host llrgate
+Host llrgate01
 HostName llrgate01.in2p3.fr
+Host llrgate02
+HostName llrgate02.in2p3.fr
 
 Host llruicms01.in2p3.fr llrcms
 User gilbert
@@ -65,7 +67,7 @@ ForwardX11Trusted yes
 ForwardX11Timeout 8h
 ForwardAgent yes
 IdentityFile ~/.ssh/id_rsa_llr
-ProxyJump llrgate01.in2p3.fr
+ProxyJump llrgate02.in2p3.fr
 Host llrcms
 HostName llruicms01.in2p3.fr
 
