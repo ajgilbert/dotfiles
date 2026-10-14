@@ -26,7 +26,7 @@ User agilbert
 ForwardX11 yes
 ForwardX11Trusted yes
 ForwardX11Timeout 8h
-#GSSAPIAuthentication yes
+GSSAPIAuthentication yes
 GSSAPIDelegateCredentials yes
 # IdentityFile ~/.ssh/id_rsa_cern
 
@@ -35,7 +35,7 @@ User agilbert
   ForwardX11 yes
   ForwardX11Trusted yes
   ForwardX11Timeout 8h
-  ProxyJump lxtunnel.cern.ch
+  ProxyJump lxplus.cern.ch
   GSSAPIAuthentication yes
   GSSAPIDelegateCredentials yes
 Host avm9
