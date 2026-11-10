@@ -37,11 +37,8 @@ if [ -f "$HOME/.local.bashrc" ]; then
   source $HOME/.local.bashrc
 fi
 
-# Webi (webinstall.dev) user-space installs: adds ~/.local/bin etc. to PATH. Used on LLR.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
 # Starship prompt (replaces the PS1 above wherever starship is installed).
-# Keep this last so PATH from brew/envman is already set up.
+# Keep this last so PATH from brew/pixi is already set up.
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init bash)"
 fi
