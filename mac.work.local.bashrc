@@ -1,9 +1,6 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-source /opt/homebrew/etc/bash_completion.d/git-completion.bash
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 alias lxp9-cm='ssh -fNM lxp9'
 alias lxp9-cm-check='ssh -O check lxplus.cern.ch'
