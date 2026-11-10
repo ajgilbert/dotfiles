@@ -1,0 +1,36 @@
+# Starship prompt config — symlinked to ~/.config/starship.toml
+# Docs: https://starship.rs/config/
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Short host label first, then every other module in its default order.
+format = '${env_var.SHORT_HOSTNAME}$all'
+
+# Host label computed in bashrc (SHORT_HOSTNAME), so the renaming rules
+# (lxplus9xx -> lxp9, llruicms01 -> llrcms, ...) live in one place.
+[env_var.SHORT_HOSTNAME]
+format = '[$env_value]($style) '
+style = 'bold yellow'
+
+# Replaced by the env_var module above (would otherwise duplicate it over ssh).
+[hostname]
+disabled = true
+
+[directory]
+truncation_length = 6
+
+# Count local branches whose tip isn't on any remote (same idea as the
+# `git unpushed` alias). Hidden when there are none or the repo has no remotes.
+[custom.unpushed]
+require_repo = true
+command = '''
+[ -n "$(git remote)" ] || exit 0
+n=$(git log --branches --not --remotes --simplify-by-decoration \
+      --decorate-refs=refs/heads --format=%D | tr ',' '\n' | grep -c .)
+if [ "$n" -gt 0 ]; then echo "⇡$n unpushed"; fi
+'''
+when = true
+shell = ['bash', '--noprofile', '--norc']
+style = 'bold red'
+format = '([$output ]($style))'   # (...) hides the module when output is empty
+description = 'Number of local branches with commits not on any remote'
