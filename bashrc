@@ -1,3 +1,6 @@
+# Exit if this is not an interactive shell
+[[ $- != *i* ]] && return
+
 shopt -s histappend
 shopt -s checkwinsize
 HISTFILESIZE=100000
